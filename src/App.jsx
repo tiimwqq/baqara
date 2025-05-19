@@ -247,18 +247,27 @@ function App() {
               Убедитесь, что вышел получатель “BAQARA”
             </h3>
 
-            <div className="flex flex-col md:flex-row items-center justify-center gap-6 px-4" id='contacts'>
+            <div
+              className="flex flex-col md:flex-row items-center justify-center md:justify-around gap-8 md:gap-6 px-4 py-12"
+              id='contacts'
+            >
               <img
                 src="/kaspi.png"
                 alt="kaspi"
-                className="w-full max-w-[335px] h-auto object-contain"
+                className="w-full max-w-[280px] sm:max-w-[320px] md:w-1/3 md:max-w-[280px] lg:max-w-[300px] h-auto rounded-lg  object-contain mb-5"
+              />
+              <img
+                src="/halyk-qr.jpg"
+                alt="halyk-qr"
+                className="w-full max-w-[280px] sm:max-w-[320px] md:w-1/3 md:max-w-[280px] lg:max-w-[300px] h-auto rounded-lg  object-contain mb-5"
               />
               <img
                 src="/halyk.png"
                 alt="halyk"
-                className="w-full max-w-[910px] h-auto object-contain"
+                className="w-full max-w-[280px] sm:max-w-[320px] md:w-1/3 md:max-w-[280px] lg:max-w-[600px] h-auto rounded-lg  object-contain mb-5"
               />
             </div>
+
           </div>
         </section>
 
