@@ -342,7 +342,7 @@ function AppContent() {
 
         <div className="flex gap-3 justify-center order-2 md:order-3">
           <a
-            href="https://wa.me/" // если есть WhatsApp-номер, можно вставить как https://wa.me/77001234567
+            href="https://wa.me/qr/FEI55VOGML6OK1" // если есть WhatsApp-номер, можно вставить как https://wa.me/77001234567
             target="_blank"
             rel="noopener noreferrer"
           >
