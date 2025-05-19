@@ -3,9 +3,22 @@ import './App.css'
 import { LanguageProvider, useLanguage, translations } from './context/LanguageContext'
 
 function AppContent() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [openStates, setOpenStates] = useState({
+    card1: false,
+    card2: false,
+    card3: false,
+    card4: false,
+  });
+
   const { language, toggleLanguage } = useLanguage();
   const t = translations[language];
+
+  const toggleCard = (cardId) => {
+    setOpenStates(prevStates => ({
+      ...prevStates, // Копируем все предыдущие состояния
+      [cardId]: !prevStates[cardId] // Инвертируем состояние для конкретной карточки
+    }));
+  };
 
   return (
     <body className=''>
@@ -35,11 +48,11 @@ function AppContent() {
             </li>
           </ul>
         </nav>
-        <button 
+        <button
           onClick={toggleLanguage}
           className="font-bold text-base rounded-xl bg-[#F5831F] max-w-[100px] self-center px-4 py-2 text-white cursor-pointer"
         >
-          {language === 'ru' ? 'қазақша' : 'русский'}
+          {language === 'ru' ? 'қазақша' : language === 'kk' ? 'english' : 'русский'}
         </button>
       </header>
 
@@ -55,10 +68,10 @@ function AppContent() {
               "Спешите творить благое"
             </h1>
 
-            <button className="text-[20px] sm:text-[24px] md:text-[32px] font-semibold px-5 sm:px-6 md:px-7 py-2 rounded-2xl text-[#24364A] bg-[#B9DEFF] flex items-center gap-2 cursor-pointer">
+            <a href="#contacts" className="text-[20px] sm:text-[24px] md:text-[32px] font-semibold px-5 sm:px-6 md:px-7 py-2 rounded-2xl text-[#24364A] bg-[#B9DEFF] flex items-center gap-2 cursor-pointer">
               {t.wantToHelp}
               <img src="/heart.svg" alt="heart" className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
-            </button>
+            </a>
           </div>
         </section>
 
@@ -97,11 +110,11 @@ function AppContent() {
               <img src="/teacher-3section.png" alt="teacher" className="w-full h-auto mb-4" />
               <button
                 className="text-[#F5831F] relative text-lg text-left sm:text-[26px] md:text-[34px] md:text-center font-extrabold border border-black rounded-2xl py-2 px-4 sm:px-8 w-full"
-                onClick={() => setIsOpen(!isOpen)}
+                onClick={() => toggleCard('card1')}
               >
                 {t.enlightenment}
                 <span className="ml-2 absolute right-2 top-1/2 -translate-y-1/2">
-                  {isOpen ? (
+                  {openStates.card1 ? (
                     <img src="/arrow.svg" alt="up" className="w-[40px] sm:w-[65px]" />
                   ) : (
                     <img src="/arrow-under.svg" alt="down" className="w-[40px] sm:w-[65px]" />
@@ -109,7 +122,7 @@ function AppContent() {
                 </span>
               </button>
 
-              {isOpen && (
+              {openStates.card1 && (
                 <div className="mt-4 text-[16px] sm:text-[20px] md:text-[28px] text-gray-800 bg-white p-3 rounded-xl border font-light">
                   <p className="font-normal">
                     <strong>{t.spiritualDevelopment}</strong>
@@ -131,41 +144,84 @@ function AppContent() {
 
             {/** Карточка 2 */}
             <div className="w-full max-w-[610px] mb-[80px]">
-              <img src="/plov-3section.png" alt="teacher" className="w-full h-auto mb-4" />
+              <img src="/plov-3section.png" alt="plov" className="w-full h-auto mb-4" />
               <button
                 className="text-[#F5831F] relative text-lg text-left sm:text-[26px] md:text-[34px] md:text-center font-extrabold border border-black rounded-2xl py-2 px-4 sm:px-8 w-full"
+                onClick={() => toggleCard('card2')}
               >
                 {t.helpNeedy}
                 <span className="ml-2 absolute right-2 top-1/2 -translate-y-1/2">
-                  <img src="/arrow-under.svg" alt="down" className="w-[40px] sm:w-[65px]" />
+                  {openStates.card2 ? (
+                    <img src="/arrow.svg" alt="up" className="w-[40px] sm:w-[65px]" />
+                  ) : (
+                    <img src="/arrow-under.svg" alt="down" className="w-[40px] sm:w-[65px]" />
+                  )}
                 </span>
               </button>
+              {openStates.card2 && (
+                <div className="mt-4 text-[16px] sm:text-[20px] md:text-[28px] text-gray-800 bg-white p-3 rounded-xl border font-light">
+                  <p className="font-normal"><strong>{t.medicalHelp}</strong></p>
+                  <p>{t.medicalHelpText}</p>
+                  <p className="font-normal"><strong>{t.hungryAndNeedy}</strong></p>
+                  <p>{t.hungryAndNeedyText}</p>
+                  <p className="font-normal"><strong>{t.travelerHelp}</strong></p>
+                  <p>{t.travelerHelpText}</p>
+                  <p className="font-normal"><strong>{t.legalHelp}</strong></p>
+                  <p>{t.legalHelpText}</p>
+                  <p className="font-normal mt-4"><em>{t.foundationNote}</em></p>
+                </div>
+              )}
             </div>
 
             {/* Карточка 3 */}
             <div className="w-full max-w-[610px] mb-[80px]">
-              <img src="/build-3section.png" alt="teacher" className="w-full h-auto mb-4" />
+              <img src="/build-3section.png" alt="build" className="w-full h-auto mb-4" />
               <button
                 className="text-[#F5831F] relative text-lg text-left sm:text-[26px] md:text-[34px] md:text-center font-extrabold border border-black rounded-2xl py-2 px-4 sm:px-8 w-full"
+                onClick={() => toggleCard('card3')}
               >
                 {t.socialProjects}
                 <span className="ml-2 absolute right-2 top-1/2 -translate-y-1/2">
-                  <img src="/arrow-under.svg" alt="down" className="w-[40px] sm:w-[65px]" />
+                  {openStates.card3 ? (
+                    <img src="/arrow.svg" alt="up" className="w-[40px] sm:w-[65px]" />
+                  ) : (
+                    <img src="/arrow-under.svg" alt="down" className="w-[40px] sm:w-[65px]" />
+                  )}
                 </span>
               </button>
+              {openStates.card3 && (
+                <div className="mt-4 text-[16px] sm:text-[20px] md:text-[28px] text-gray-800 bg-white p-3 rounded-xl border font-light">
+                  <p className="font-normal"><strong>{t.ramadan}</strong></p>
+                  <p>{t.ramadanText}</p>
+                  <p className="font-normal"><strong>{t.kurban}</strong></p>
+                  <p>{t.kurbanText}</p>
+                  <p className="font-normal"><strong>{t.mosqueSupport}</strong></p>
+                  <p>{t.mosqueSupportText}</p>
+                </div>
+              )}
             </div>
 
             {/* Карточка 4 */}
             <div className="w-full max-w-[610px] mb-[80px]">
-              <img src="/garden-3section.png" alt="teacher" className="w-full h-auto mb-4" />
+              <img src="/garden-3section.png" alt="garden" className="w-full h-auto mb-4" />
               <button
                 className="text-[#F5831F] relative text-lg text-left sm:text-[26px] md:text-[34px] md:text-center font-extrabold border border-black rounded-2xl py-2 px-4 sm:px-8 w-full"
+                onClick={() => toggleCard('card4')}
               >
-                {t.socialProjects}
+                {t.publicSpaces}
                 <span className="ml-2 absolute right-2 top-1/2 -translate-y-1/2">
-                  <img src="/arrow-under.svg" alt="down" className="w-[40px] sm:w-[65px]" />
+                  {openStates.card4 ? (
+                    <img src="/arrow.svg" alt="up" className="w-[40px] sm:w-[65px]" />
+                  ) : (
+                    <img src="/arrow-under.svg" alt="down" className="w-[40px] sm:w-[65px]" />
+                  )}
                 </span>
               </button>
+              {openStates.card4 && (
+                <div className="mt-4 text-[16px] sm:text-[20px] md:text-[28px] text-gray-800 bg-white p-3 rounded-xl border font-light">
+                  <p>{t.publicSpacesText}</p>
+                </div>
+              )}
             </div>
           </div>
         </section>
@@ -285,10 +341,37 @@ function AppContent() {
         </div>
 
         <div className="flex gap-3 justify-center order-2 md:order-3">
-          <img src="/whatsapp.svg" alt="whatsapp" className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8" />
-          <img src="/youtube-1.svg" alt="youtube" className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8" />
-          <img src="/insta.svg" alt="insta" className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8" />
-          <img src="/tg.svg" alt="tg" className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8" />
+          <a
+            href="https://wa.me/" // если есть WhatsApp-номер, можно вставить как https://wa.me/77001234567
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/whatsapp.svg" alt="whatsapp" className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8" />
+          </a>
+
+          <a
+            href="https://youtube.com/@baqarafoundation?feature=shared"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/youtube-1.svg" alt="youtube" className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8" />
+          </a>
+
+          <a
+            href="https://www.instagram.com/baqarafoundation?utm_source=qr&igsh=MTJ3YjhmYTA3bG1jbw=="
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/insta.svg" alt="insta" className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8" />
+          </a>
+
+          <a
+            href="https://t.me/BAQARAfoundation"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img src="/tg.svg" alt="tg" className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8" />
+          </a>
         </div>
       </footer>
 
