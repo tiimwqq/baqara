@@ -286,6 +286,7 @@ function AppContent() {
 
         <div className="flex gap-3 justify-center order-2 md:order-3">
           <img src="/whatsapp.svg" alt="whatsapp" className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8" />
+          <img src="/youtube-1.svg" alt="youtube" className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8" />
           <img src="/insta.svg" alt="insta" className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8" />
           <img src="/tg.svg" alt="tg" className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8" />
         </div>
