@@ -8,7 +8,7 @@ function App() {
       <header className="max-w-[1440px] mx-auto px-8 py-6 h-auto md:h-[290px] flex flex-col md:flex-row md:items-center md:justify-between border-b border-[#D8D8D8] gap-4 md:gap-0">
         {/* Логотип */}
         <div className="w-full md:w-[250px] flex justify-center md:justify-start ">
-          <img src="/public/logo.png" alt="logo" className="max-w-[200px] " />
+          <img src="/logo.png" alt="logo" className="max-w-[200px] " />
         </div>
 
         {/* Навигация */}
@@ -39,7 +39,7 @@ function App() {
           <div className="absolute inset-0 bg-black bg-opacity-30 z-0"></div>
 
           <div
-            className="relative z-10 bg-[url('/public/bg-hay.png')] bg-cover bg-center w-full h-full flex items-center justify-center flex-col text-center px-4"
+            className="relative z-10 bg-[url('/bg-hay.png')] bg-cover bg-center w-full h-full flex items-center justify-center flex-col text-center px-4"
           >
             <h1 className="text-[28px] sm:text-[36px] md:text-[56px] text-white font-bold italic mb-4">
               "Спешите творить благое"
@@ -47,7 +47,7 @@ function App() {
 
             <button className="text-[20px] sm:text-[24px] md:text-[32px] font-semibold px-5 sm:px-6 md:px-7 py-2 rounded-2xl text-[#24364A] bg-[#B9DEFF] flex items-center gap-2 cursor-pointer">
               Xочу помочь
-              <img src="/public/heart.svg" alt="heart" className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
+              <img src="/heart.svg" alt="heart" className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7" />
             </button>
           </div>
         </section>
@@ -60,7 +60,7 @@ function App() {
           <div className="flex flex-col-reverse md:flex-row flex-wrap items-center justify-around gap-6">
             <div className="w-full md:max-w-[770px] p-4">
               <h3 className="text-[24px] sm:text-[28px] md:text-[36px] font-bold text-[#F5831F] mb-2">
-                <img src="/public/orange-heart.svg" alt="orange-heart" className="inline mx-1 w-6 h-6" />
+                <img src="/orange-heart.svg" alt="orange-heart" className="inline mx-1 w-6 h-6" />
                 Миссия
               </h3>
               <p className="font-light text-[16px] sm:text-[20px] md:text-[24px]">
@@ -70,7 +70,7 @@ function App() {
             </div>
 
             <img
-              src="/public/sky.png"
+              src="/sky.png"
               alt="sky"
               className="w-full max-w-[530px] h-auto p-4"
             />
@@ -85,7 +85,7 @@ function App() {
           <div className="flex flex-col lg:flex-row lg:flex-wrap gap-8 justify-around">
             {/** Карточка 1 */}
             <div className="w-full max-w-[610px] mb-[80px]">
-              <img src="/public/teacher-3section.png" alt="teacher" className="w-full h-auto mb-4" />
+              <img src="/teacher-3section.png" alt="teacher" className="w-full h-auto mb-4" />
               <button
                 className="text-[#F5831F] relative text-lg text-left sm:text-[26px] md:text-[34px] md:text-center font-extrabold border border-black rounded-2xl py-2 px-4 sm:px-8 w-full"
                 onClick={() => setIsOpen(!isOpen)}
@@ -93,9 +93,9 @@ function App() {
                 Просвещение
                 <span className="ml-2 absolute right-2 top-1/2 -translate-y-1/2">
                   {isOpen ? (
-                    <img src="/public/arrow.svg" alt="up" className="w-[40px] sm:w-[65px]" />
+                    <img src="/arrow.svg" alt="up" className="w-[40px] sm:w-[65px]" />
                   ) : (
-                    <img src="/public/arrow-under.svg" alt="down" className="w-[40px] sm:w-[65px]" />
+                    <img src="/arrow-under.svg" alt="down" className="w-[40px] sm:w-[65px]" />
                   )}
                 </span>
               </button>
@@ -130,39 +130,39 @@ function App() {
 
             {/** Карточка 2 */}
             <div className="w-full max-w-[610px] mb-[80px]">
-              <img src="/public/plov-3section.png" alt="teacher" className="w-full h-auto mb-4" />
+              <img src="/plov-3section.png" alt="teacher" className="w-full h-auto mb-4" />
               <button
                 className="text-[#F5831F] relative text-lg text-left sm:text-[26px] md:text-[34px] md:text-center font-extrabold border border-black rounded-2xl py-2 px-4 sm:px-8 w-full"
               >
                 Помощь нуждающимся
                 <span className="ml-2 absolute right-2 top-1/2 -translate-y-1/2">
-                  <img src="/public/arrow-under.svg" alt="down" className="w-[40px] sm:w-[65px]" />
+                  <img src="/arrow-under.svg" alt="down" className="w-[40px] sm:w-[65px]" />
                 </span>
               </button>
             </div>
 
             {/* Карточка 3 */}
             <div className="w-full max-w-[610px] mb-[80px]">
-              <img src="/public/build-3section.png" alt="teacher" className="w-full h-auto mb-4" />
+              <img src="/build-3section.png" alt="teacher" className="w-full h-auto mb-4" />
               <button
                 className="text-[#F5831F] relative text-lg text-left sm:text-[26px] md:text-[34px] md:text-center font-extrabold border border-black rounded-2xl py-2 px-4 sm:px-8 w-full"
               >
                 Социальные проекты
                 <span className="ml-2 absolute right-2 top-1/2 -translate-y-1/2">
-                  <img src="/public/arrow-under.svg" alt="down" className="w-[40px] sm:w-[65px]" />
+                  <img src="/arrow-under.svg" alt="down" className="w-[40px] sm:w-[65px]" />
                 </span>
               </button>
             </div>
 
             {/* Карточка 4 */}
             <div className="w-full max-w-[610px] mb-[80px]">
-              <img src="/public/garden-3section.png" alt="teacher" className="w-full h-auto mb-4" />
+              <img src="/garden-3section.png" alt="teacher" className="w-full h-auto mb-4" />
               <button
                 className="text-[#F5831F] relative text-lg text-left sm:text-[26px] md:text-[34px] md:text-center font-extrabold border border-black rounded-2xl py-2 px-4 sm:px-8 w-full"
               >
                 Социальные проекты
                 <span className="ml-2 absolute right-2 top-1/2 -translate-y-1/2">
-                  <img src="/public/arrow-under.svg" alt="down" className="w-[40px] sm:w-[65px]" />
+                  <img src="/arrow-under.svg" alt="down" className="w-[40px] sm:w-[65px]" />
                 </span>
               </button>
             </div>
@@ -179,7 +179,7 @@ function App() {
           </h3>
 
           <img
-            src="/public/hadis.png"
+            src="/hadis.png"
             alt="img"
             className="w-full max-w-[860px] mx-auto mb-6 sm:mb-[25px]"
           />
@@ -249,12 +249,12 @@ function App() {
 
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 px-4" id='contacts'>
               <img
-                src="/public/kaspi.png"
+                src="/kaspi.png"
                 alt="kaspi"
                 className="w-full max-w-[335px] h-auto object-contain"
               />
               <img
-                src="/public/halyk.png"
+                src="/halyk.png"
                 alt="halyk"
                 className="w-full max-w-[910px] h-auto object-contain"
               />
@@ -265,7 +265,7 @@ function App() {
       </main>
       <footer className="bg-[#FFD5B3] px-5 md:px-[100px] py-6 flex flex-col md:flex-row items-center md:justify-around text-center md:text-left gap-[20px] md:gap-0">
         <img
-          src="/public/logo.png"
+          src="/logo.png"
           alt="logo"
           className="max-w-[80px] md:max-w-[105px] order-3 md:order-1"
         />
@@ -275,9 +275,9 @@ function App() {
         </div>
 
         <div className="flex gap-3 justify-center order-2 md:order-3">
-          <img src="/public/whatsapp.svg" alt="whatsapp" className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8" />
-          <img src="/public/insta.svg" alt="insta" className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8" />
-          <img src="/public/tg.svg" alt="tg" className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8" />
+          <img src="/whatsapp.svg" alt="whatsapp" className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8" />
+          <img src="/insta.svg" alt="insta" className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8" />
+          <img src="/tg.svg" alt="tg" className="cursor-pointer w-6 h-6 sm:w-8 sm:h-8" />
         </div>
       </footer>
 
