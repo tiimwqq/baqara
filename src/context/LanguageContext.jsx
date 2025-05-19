@@ -23,7 +23,7 @@ export const translations = {
     currentData: 'Актуальные данные',
     helpButton: 'Помочь',
     verifyRecipient: 'Убедитесь, что вышел получатель "BAQARA"',
-    allRightsReserved: '"Благотворительный фонд Baqara", все права защищены, 2025',
+    allRightsReserved: 'Благотворительный фонд "BAQARA", все права защищены, 2025',
     // Program details translations
     spiritualDevelopment: '1. Духовно-Нравственное развитие.',
     spiritualDevelopmentText: 'В современном мире нам активно навязывают идею потребительского отношения к жизни, в результате чего формируется общество людей, главное для которых - лишь прожить сегодняшний день, любыми способами удовлетворяя свои прихоти и желания. Причиной того, что общество, особенно молодежь, легко попадает под пропаганду культа потребления, является отсутствие духовных ориентиров. Зачастую многие родители считают, что достаточно лишь одеть, накормить ребенка, дать ему общее образование, но научить его быть человеком, привить ему высокие нравственные ценности не стоит на повестке дня. Программа просвещения нацелена объединить всех неравнодушных к этой проблеме людей для формирования общества с высокими духовными ценностями. Программа включает в себя- распространение идей добра, взаимопомощи и справедливости путем размещения информации в СМИ и общественных местах (стенды, баннеры, плакаты, табличек, аудио- видео материалы)',
@@ -90,7 +90,7 @@ export const translations = {
     currentData: 'Ағымдағы мәліметтер',
     helpButton: 'Көмеkтесу',
     verifyRecipient: '"BAQARA" алушы шыққанын тексеріңіз',
-    allRightsReserved: '"Басқара қайырымдылық қоры", барлық құқықтар қорғалған, 2025',
+    allRightsReserved: '"BAQARA" қайырымдылық қоры, барлық құқықтар қорғалған, 2025',
     // Program details translations
     spiritualDevelopment: '1. Рухани-адамгершілік даму.',
     spiritualDevelopmentText: 'Қазіргі әлемде бізге тұтынушылық қатынасы идеясын белсенді түрде салады, нәтижесінде тек бүгінгі күнді өмір сүру, өз қалаулары мен тілектерін қалай болса солай қанағаттандыру - бұл негізгі мақсат болған адамдар қоғамы қалыптасады. Қоғам, әсіресе жастар, тұтыну культінің насихатына оңай түсуінің себебі - рухани бағдарламалардың жоқтығы. Көптеген ата-аналар тек баланы киіндіру, тамақтандыру, жалпы білім беру жеткілікті деп санайды, бірақ оны адам болуға үйрету, жоғары адамгершілік құндылықтарды сіңіру - күн тәртібінде тұрмайды. Ағарту бағдарламасы осы мәселеге қатысты барлық адамдарды жоғары рухани құндылықтары бар қоғам қалыптастыру үшін біріктіруге бағытталған. Бағдарламаға жақсылық, өзара көмеk және әділдіk идеяларын БАҚ және қоғамдық орындарда (стендтер, баннерлер, плакаттар, тақталар, аудио-бейне материалдары) ақпарат орналастыру арқылы тарату кіреді.',
@@ -157,7 +157,7 @@ export const translations = {
     currentData: 'Current data',
     helpButton: 'Help',
     verifyRecipient: 'Make sure the recipient "BAQARA" appears',
-    allRightsReserved: '"Baqara Charitable Foundation", all rights reserved, 2025',
+    allRightsReserved: '"BAQARA" charitable foundation, all rights reserved, 2025',
     // Program details translations
     spiritualDevelopment: '1. Spiritual and Moral Development.',
     spiritualDevelopmentText: 'In the modern world, we are actively being imposed with the idea of consumerism, resulting in a society where people\'s main goal is just to live through today, satisfying their whims and desires by any means. The reason why society, especially youth, easily falls under the propaganda of consumerism is the absence of spiritual guidelines. Often, many parents believe that it is enough to just clothe, feed the child, give them a general education, but teaching them to be a person, instilling high moral values is not on the agenda. The enlightenment program aims to unite all people concerned about this problem to form a society with high spiritual values. The program includes spreading ideas of goodness, mutual assistance, and justice through information placement in media and public places (stands, banners, posters, signs, audio-video materials)',
